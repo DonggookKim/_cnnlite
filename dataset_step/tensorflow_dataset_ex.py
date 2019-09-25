@@ -3,6 +3,8 @@ import pathlib
 import random
 import matplotlib.pyplot as plt
 
+# From https://www.tensorflow.org/tutorials/load_data/images
+
 def preprocess_image(image):
     image = tf.image.decode_jpeg(image, channels=3)
     image = tf.image.resize(image, [192, 192])
